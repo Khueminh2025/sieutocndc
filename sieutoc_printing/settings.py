@@ -17,6 +17,8 @@ import cloudinary
 import cloudinary.uploader
 import cloudinary.api
 
+from urllib.parse import urlparse
+
 env = environ.Env(
     DEBUG=(bool, False)
 )
@@ -49,9 +51,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.humanize',
-    'printing',
     'cloudinary_storage',
     'cloudinary',
+
 ]
 
 MIDDLEWARE = [
@@ -139,8 +141,8 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
@@ -149,7 +151,17 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': os.environ.get('CLOUDINARY_URL').split('@')[-1],
-}
+# DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+# CLOUDINARY_STORAGE = {
+#     'CLOUD_NAME': os.environ.get('CLOUDINARY_URL').split('@')[-1],
+# }
+
+cloudinary_url = os.environ.get('CLOUDINARY_URL')
+if cloudinary_url:
+    parsed = urlparse(cloudinary_url)
+    CLOUDINARY_STORAGE = {
+        'CLOUD_NAME': parsed.hostname,
+        'API_KEY': parsed.username,
+        'API_SECRET': parsed.password,
+    }
+    DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
