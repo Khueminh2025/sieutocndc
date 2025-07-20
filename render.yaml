@@ -5,6 +5,7 @@ services:
     plan: free
     buildCommand: "./build.sh"
     startCommand: "gunicorn sieutoc_printing.wsgi:application --bind 0.0.0.0:$PORT"
+    preDeployCommand: "python manage.py migrate"
     envVars:
       - key: DJANGO_SETTINGS_MODULE
         value: sieutoc_printing.settings
