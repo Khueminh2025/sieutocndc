@@ -1,0 +1,43 @@
+{% load static %}
+{% load humanize %}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ service.name }} - Siêu Tốc</title>
+    <link href="{% static 'css/output.css' %}" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+<div class="max-w-4xl mx-auto p-4">
+    <h1 class="text-3xl font-bold mb-4">{{ service.name }}</h1>
+
+    {% if service.image %}
+        <img src="{{ service.image.url }}" alt="{{ service.name }}" class="rounded shadow mb-4 w-full max-w-md">
+    {% endif %}
+
+    <h2 class="text-xl font-semibold mb-2">Bảng giá</h2>
+    <table class="w-full table-auto mb-4 bg-white rounded shadow">
+        <thead>
+            <tr class="bg-gray-200">
+                <th class="text-left p-2">Đơn vị</th>
+                <th class="text-left p-2">Giá (VND)</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for price in prices %}
+                <tr class="border-t">
+                    <td class="p-2">{{ price.unit }}</td>
+                    <td class="p-2">{{ price.price|intcomma }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+<a href="{% url 'order_create' service.slug %}" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+    Đặt hàng ngay
+</a>
+</div>
+
+</body>
+</html>

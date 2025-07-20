@@ -1,0 +1,39 @@
+{% load static %}
+{% load humanize %}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Thanh toán đơn #{{ order.id }}</title>
+    <link href="{% static 'css/output.css' %}" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+<div class="max-w-xl mx-auto p-4 text-center">
+    <h1 class="text-2xl font-bold mb-4">Thanh toán đơn hàng</h1>
+
+    <div class="bg-white rounded shadow p-4 text-left">
+        <p><strong>🔹 Mã đơn hàng:</strong> {{ order.order_code }}</p>
+        <p><strong>🔹 Số điện thoại:</strong> {{ order.phone }}</p>
+        <p><strong>🔹 Khách hàng:</strong> {{ order.customer_name }}</p>
+        <p><strong>🔹 Sản phẩm:</strong> {{ order.service.name }} - {{ order.unit }}</p>
+        <p><strong>🔹 Số lượng:</strong> {{ order.quantity }}</p>
+        <p><strong>🔹 Tổng tiền:</strong> {{ order.total_price|intcomma }} VND</p>
+        <p><strong>🔹 Nội dung chuyển khoản:</strong> THANHTOAN {{ order.order_code }}</p>
+    </div>
+
+    <div class="my-4">
+        <img src="{% static 'img/qr-code.png' %}" alt="QR Thanh toán" class="mx-auto rounded shadow max-w-xs">
+    </div>
+
+    <p class="text-sm text-gray-600">
+        Quét QR để thanh toán hoặc chuyển khoản thủ công với đúng <strong>số tiền</strong> và <strong>nội dung chuyển khoản</strong> để hệ thống tự động ghi nhận.
+    </p>
+
+    <a href="{% url 'order_tracking_entry' %}" class="mt-4 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+        Tôi đã thanh toán
+    </a>
+</div>
+
+</body>
+</html>

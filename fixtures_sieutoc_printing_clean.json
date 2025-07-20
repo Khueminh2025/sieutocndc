@@ -1,0 +1,1467 @@
+[
+  {
+    "model": "printing.ServiceCategory",
+    "pk": 1,
+    "fields": {
+      "name": "Đóng sách"
+    }
+  },
+  {
+    "model": "printing.ServiceCategory",
+    "pk": 2,
+    "fields": {
+      "name": "Scan"
+    }
+  },
+  {
+    "model": "printing.ServiceCategory",
+    "pk": 3,
+    "fields": {
+      "name": "Gia công"
+    }
+  },
+  {
+    "model": "printing.ServiceCategory",
+    "pk": 4,
+    "fields": {
+      "name": "In nhanh"
+    }
+  },
+  {
+    "model": "printing.ServiceCategory",
+    "pk": 5,
+    "fields": {
+      "name": "Thiết kế"
+    }
+  },
+  {
+    "model": "printing.ServiceCategory",
+    "pk": 6,
+    "fields": {
+      "name": "Ấn Phẩm Văn Phòng"
+    }
+  },
+  {
+    "model": "printing.ServiceCategory",
+    "pk": 7,
+    "fields": {
+      "name": "Ấn Phẩm Quảng Cáo"
+    }
+  },
+  {
+    "model": "printing.ServiceCategory",
+    "pk": 8,
+    "fields": {
+      "name": "Ép plasitc"
+    }
+  },
+  {
+    "model": "printing.ServiceCategory",
+    "pk": 9,
+    "fields": {
+      "name": "In Xưởng"
+    }
+  },
+  {
+    "model": "printing.ServiceCategory",
+    "pk": 10,
+    "fields": {
+      "name": "In Bản vẽ"
+    }
+  },
+  {
+    "model": "printing.ServiceCategory",
+    "pk": 11,
+    "fields": {
+      "name": "Phụ Kiện In Ấn"
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 1,
+    "fields": {
+      "category": 1,
+      "name": "Đóng kim keo",
+      "image": "",
+      "is_popular": true
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 1,
+    "fields": {
+      "service": 1,
+      "unit": "A4",
+      "price": 5000
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 2,
+    "fields": {
+      "service": 1,
+      "unit": "A3",
+      "price": 7000
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 3,
+    "fields": {
+      "service": 1,
+      "unit": "A2",
+      "price": 15000
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 4,
+    "fields": {
+      "service": 1,
+      "unit": "A1",
+      "price": 25000
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 5,
+    "fields": {
+      "service": 1,
+      "unit": "A0",
+      "price": 45000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 2,
+    "fields": {
+      "category": 1,
+      "name": "Đóng kim kiếng",
+      "image": "",
+      "is_popular": false
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 6,
+    "fields": {
+      "service": 2,
+      "unit": "A4",
+      "price": 10000
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 7,
+    "fields": {
+      "service": 2,
+      "unit": "A3",
+      "price": 15000
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 8,
+    "fields": {
+      "service": 2,
+      "unit": "A2",
+      "price": 35000
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 9,
+    "fields": {
+      "service": 2,
+      "unit": "A1",
+      "price": 55000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 3,
+    "fields": {
+      "category": 1,
+      "name": "Đóng lò xo xoắn",
+      "image": "",
+      "is_popular": false
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 10,
+    "fields": {
+      "service": 3,
+      "unit": "A4",
+      "price": 19000
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 11,
+    "fields": {
+      "service": 3,
+      "unit": "A3",
+      "price": 39000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 4,
+    "fields": {
+      "category": 1,
+      "name": "Đóng lò xo nhựa",
+      "image": "",
+      "is_popular": false
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 12,
+    "fields": {
+      "service": 4,
+      "unit": "A4",
+      "price": 15000
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 13,
+    "fields": {
+      "service": 4,
+      "unit": "A3",
+      "price": 35000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 5,
+    "fields": {
+      "category": 1,
+      "name": "Đóng lò xo kẽm",
+      "image": "",
+      "is_popular": false
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 14,
+    "fields": {
+      "service": 5,
+      "unit": "A4",
+      "price": 20000
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 15,
+    "fields": {
+      "service": 5,
+      "unit": "A3",
+      "price": 40000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 6,
+    "fields": {
+      "category": 2,
+      "name": "Scan Màu",
+      "image": "",
+      "is_popular": true
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 16,
+    "fields": {
+      "service": 6,
+      "unit": "A4",
+      "price": 2000
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 17,
+    "fields": {
+      "service": 6,
+      "unit": "A3",
+      "price": 5000
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 18,
+    "fields": {
+      "service": 6,
+      "unit": "A2",
+      "price": 10000
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 19,
+    "fields": {
+      "service": 6,
+      "unit": "A1",
+      "price": 30000
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 20,
+    "fields": {
+      "service": 6,
+      "unit": "A0",
+      "price": 50000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 7,
+    "fields": {
+      "category": 2,
+      "name": "Scan Trắng Đen",
+      "image": "",
+      "is_popular": false
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 21,
+    "fields": {
+      "service": 7,
+      "unit": "A4",
+      "price": 2000
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 22,
+    "fields": {
+      "service": 7,
+      "unit": "A3",
+      "price": 5000
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 23,
+    "fields": {
+      "service": 7,
+      "unit": "A2",
+      "price": 20000
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 24,
+    "fields": {
+      "service": 7,
+      "unit": "A1",
+      "price": 40000
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 25,
+    "fields": {
+      "service": 7,
+      "unit": "A0",
+      "price": 80000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 8,
+    "fields": {
+      "category": 3,
+      "name": "Ép kim",
+      "image": "",
+      "is_popular": true
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 26,
+    "fields": {
+      "service": 8,
+      "unit": "LẦN",
+      "price": 100000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 9,
+    "fields": {
+      "category": 3,
+      "name": "Cắt Thành Phẩm",
+      "image": "",
+      "is_popular": false
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 27,
+    "fields": {
+      "service": 9,
+      "unit": "LẦN",
+      "price": 10000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 10,
+    "fields": {
+      "category": 3,
+      "name": "Đóng bìa cứng",
+      "image": "",
+      "is_popular": false
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 28,
+    "fields": {
+      "service": 10,
+      "unit": "A4",
+      "price": 180000
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 29,
+    "fields": {
+      "service": 10,
+      "unit": "A3",
+      "price": 360000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 11,
+    "fields": {
+      "category": 3,
+      "name": "Ép keo nhiệt",
+      "image": "",
+      "is_popular": false
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 30,
+    "fields": {
+      "service": 11,
+      "unit": "A4",
+      "price": 80000
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 31,
+    "fields": {
+      "service": 11,
+      "unit": "A3",
+      "price": 160000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 12,
+    "fields": {
+      "category": 3,
+      "name": "Cán màn",
+      "image": "",
+      "is_popular": true
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 32,
+    "fields": {
+      "service": 12,
+      "unit": "A4",
+      "price": 5000
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 33,
+    "fields": {
+      "service": 12,
+      "unit": "A3",
+      "price": 10000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 13,
+    "fields": {
+      "category": 3,
+      "name": "Cán màn",
+      "image": "",
+      "is_popular": false
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 34,
+    "fields": {
+      "service": 13,
+      "unit": "A2",
+      "price": 15000
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 35,
+    "fields": {
+      "service": 12,
+      "unit": "A1",
+      "price": 30000
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 36,
+    "fields": {
+      "service": 12,
+      "unit": "A0",
+      "price": 60000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 14,
+    "fields": {
+      "category": 3,
+      "name": "Ép Bọc",
+      "image": "",
+      "is_popular": false
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 37,
+    "fields": {
+      "service": 14,
+      "unit": "A4",
+      "price": 5000
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 38,
+    "fields": {
+      "service": 14,
+      "unit": "A3",
+      "price": 10000
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 39,
+    "fields": {
+      "service": 14,
+      "unit": "A2",
+      "price": 25000
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 40,
+    "fields": {
+      "service": 14,
+      "unit": "A1",
+      "price": 50000
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 41,
+    "fields": {
+      "service": 14,
+      "unit": "A0",
+      "price": 100000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 15,
+    "fields": {
+      "category": 4,
+      "name": "In Trắng Đen",
+      "image": "",
+      "is_popular": true
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 42,
+    "fields": {
+      "service": 15,
+      "unit": "A4",
+      "price": 1000
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 43,
+    "fields": {
+      "service": 15,
+      "unit": "A3",
+      "price": 3000
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 44,
+    "fields": {
+      "service": 15,
+      "unit": "A2",
+      "price": 12000
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 45,
+    "fields": {
+      "service": 15,
+      "unit": "A1",
+      "price": 16000
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 46,
+    "fields": {
+      "service": 15,
+      "unit": "A0",
+      "price": 32000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 16,
+    "fields": {
+      "category": 4,
+      "name": "In màu mực nước",
+      "image": "",
+      "is_popular": true
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 47,
+    "fields": {
+      "service": 16,
+      "unit": "A4",
+      "price": 2500
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 48,
+    "fields": {
+      "service": 16,
+      "unit": "A3",
+      "price": 5000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 17,
+    "fields": {
+      "category": 4,
+      "name": "In màu Khổ Lớn",
+      "image": "",
+      "is_popular": false
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 49,
+    "fields": {
+      "service": 17,
+      "unit": "A2",
+      "price": 30000
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 50,
+    "fields": {
+      "service": 17,
+      "unit": "A1",
+      "price": 40000
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 51,
+    "fields": {
+      "service": 17,
+      "unit": "A0",
+      "price": 80000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 18,
+    "fields": {
+      "category": 4,
+      "name": "In màu Quá Khổ",
+      "image": "",
+      "is_popular": false
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 52,
+    "fields": {
+      "service": 18,
+      "unit": "M2",
+      "price": 200000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 19,
+    "fields": {
+      "category": 5,
+      "name": "Thiết Kế theo Mẫu",
+      "image": "",
+      "is_popular": true
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 53,
+    "fields": {
+      "service": 19,
+      "unit": "LẦN",
+      "price": 300000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 20,
+    "fields": {
+      "category": 5,
+      "name": "Thiết Kế theo yêu cầu",
+      "image": "",
+      "is_popular": false
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 54,
+    "fields": {
+      "service": 20,
+      "unit": "LẦN",
+      "price": 500000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 21,
+    "fields": {
+      "category": 5,
+      "name": "Chỉnh sửa luận văn",
+      "image": "",
+      "is_popular": false
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 55,
+    "fields": {
+      "service": 21,
+      "unit": "LẦN",
+      "price": 200000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 22,
+    "fields": {
+      "category": 5,
+      "name": "Tạo file số lượng lớn",
+      "image": "",
+      "is_popular": false
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 56,
+    "fields": {
+      "service": 22,
+      "unit": "LẦN",
+      "price": 200000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 23,
+    "fields": {
+      "category": 6,
+      "name": "Danh thiếp",
+      "image": "",
+      "is_popular": false
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 57,
+    "fields": {
+      "service": 23,
+      "unit": "HỘP",
+      "price": 150000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 24,
+    "fields": {
+      "category": 6,
+      "name": "Sách ép keo nhiệt",
+      "image": "",
+      "is_popular": false
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 58,
+    "fields": {
+      "service": 24,
+      "unit": "A4",
+      "price": 80000
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 59,
+    "fields": {
+      "service": 24,
+      "unit": "A3",
+      "price": 160000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 25,
+    "fields": {
+      "category": 6,
+      "name": "Sách đóng bìa cứng",
+      "image": "",
+      "is_popular": false
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 60,
+    "fields": {
+      "service": 25,
+      "unit": "A4",
+      "price": 180000
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 61,
+    "fields": {
+      "service": 25,
+      "unit": "A3",
+      "price": 360000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 26,
+    "fields": {
+      "category": 6,
+      "name": "Bao thư",
+      "image": "",
+      "is_popular": true
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 62,
+    "fields": {
+      "service": 26,
+      "unit": "A4",
+      "price": 100000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 27,
+    "fields": {
+      "category": 6,
+      "name": "Giấy ghi chú",
+      "image": "",
+      "is_popular": true
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 63,
+    "fields": {
+      "service": 27,
+      "unit": "A5",
+      "price": 100000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 28,
+    "fields": {
+      "category": 6,
+      "name": "Giấy tiêu đề",
+      "image": "",
+      "is_popular": true
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 64,
+    "fields": {
+      "service": 28,
+      "unit": "A6",
+      "price": 100000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 29,
+    "fields": {
+      "category": 6,
+      "name": "Bìa đựng hồ sơ",
+      "image": "",
+      "is_popular": true
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 65,
+    "fields": {
+      "service": 29,
+      "unit": "A7",
+      "price": 100000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 30,
+    "fields": {
+      "category": 7,
+      "name": "Voucher",
+      "image": "",
+      "is_popular": true
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 66,
+    "fields": {
+      "service": 30,
+      "unit": "A8",
+      "price": 100000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 31,
+    "fields": {
+      "category": 7,
+      "name": "Poster",
+      "image": "",
+      "is_popular": true
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 67,
+    "fields": {
+      "service": 31,
+      "unit": "A9",
+      "price": 100000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 32,
+    "fields": {
+      "category": 7,
+      "name": "Standee",
+      "image": "",
+      "is_popular": true
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 68,
+    "fields": {
+      "service": 32,
+      "unit": "A10",
+      "price": 100000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 33,
+    "fields": {
+      "category": 7,
+      "name": "Tờ rơi",
+      "image": "",
+      "is_popular": true
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 69,
+    "fields": {
+      "service": 33,
+      "unit": "A11",
+      "price": 100000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 34,
+    "fields": {
+      "category": 7,
+      "name": "Tờ gấp",
+      "image": "",
+      "is_popular": true
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 70,
+    "fields": {
+      "service": 34,
+      "unit": "A12",
+      "price": 100000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 35,
+    "fields": {
+      "category": 7,
+      "name": "Vé",
+      "image": "",
+      "is_popular": true
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 71,
+    "fields": {
+      "service": 35,
+      "unit": "A13",
+      "price": 100000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 36,
+    "fields": {
+      "category": 7,
+      "name": "Catalogue",
+      "image": "",
+      "is_popular": true
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 72,
+    "fields": {
+      "service": 36,
+      "unit": "A14",
+      "price": 100000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 37,
+    "fields": {
+      "category": 7,
+      "name": "Hasgtag cầm tay",
+      "image": "",
+      "is_popular": true
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 73,
+    "fields": {
+      "service": 37,
+      "unit": "A15",
+      "price": 100000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 38,
+    "fields": {
+      "category": 7,
+      "name": "Tranh Canvas",
+      "image": "",
+      "is_popular": true
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 74,
+    "fields": {
+      "service": 38,
+      "unit": "A16",
+      "price": 100000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 39,
+    "fields": {
+      "category": 7,
+      "name": "PP bồi Fomex",
+      "image": "",
+      "is_popular": true
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 75,
+    "fields": {
+      "service": 39,
+      "unit": "A17",
+      "price": 100000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 40,
+    "fields": {
+      "category": 7,
+      "name": "Băn rôn",
+      "image": "",
+      "is_popular": true
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 76,
+    "fields": {
+      "service": 40,
+      "unit": "A18",
+      "price": 100000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 41,
+    "fields": {
+      "category": 8,
+      "name": "Ép plasic tiêu chuẩn",
+      "image": "",
+      "is_popular": true
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 77,
+    "fields": {
+      "service": 41,
+      "unit": "A19",
+      "price": 100000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 42,
+    "fields": {
+      "category": 8,
+      "name": "Ép plastic đóng cuốn",
+      "image": "",
+      "is_popular": false
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 78,
+    "fields": {
+      "service": 42,
+      "unit": "A20",
+      "price": 100000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 43,
+    "fields": {
+      "category": 8,
+      "name": "Ép plastic theo yêu cầu",
+      "image": "",
+      "is_popular": false
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 79,
+    "fields": {
+      "service": 43,
+      "unit": "A21",
+      "price": 100000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 44,
+    "fields": {
+      "category": 9,
+      "name": "In bạt Hiflex",
+      "image": "",
+      "is_popular": false
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 80,
+    "fields": {
+      "service": 44,
+      "unit": "A22",
+      "price": 100000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 45,
+    "fields": {
+      "category": 9,
+      "name": "In Decal Trong 1m",
+      "image": "",
+      "is_popular": false
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 81,
+    "fields": {
+      "service": 45,
+      "unit": "A23",
+      "price": 100000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 46,
+    "fields": {
+      "category": 9,
+      "name": "In PP khổ lớn",
+      "image": "",
+      "is_popular": false
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 82,
+    "fields": {
+      "service": 46,
+      "unit": "A24",
+      "price": 100000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 47,
+    "fields": {
+      "category": 10,
+      "name": "In Bản Vẽ Xây Dưng",
+      "image": "",
+      "is_popular": false
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 83,
+    "fields": {
+      "service": 47,
+      "unit": "A25",
+      "price": 100000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 48,
+    "fields": {
+      "category": 10,
+      "name": "In Bản Vẽ Kiến Trúc",
+      "image": "",
+      "is_popular": false
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 84,
+    "fields": {
+      "service": 48,
+      "unit": "A26",
+      "price": 100000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 49,
+    "fields": {
+      "category": 10,
+      "name": "In Hồ Sơ Nộp thầu",
+      "image": "",
+      "is_popular": false
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 85,
+    "fields": {
+      "service": 49,
+      "unit": "A27",
+      "price": 100000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 50,
+    "fields": {
+      "category": 11,
+      "name": "Chân standee cuộn",
+      "image": "",
+      "is_popular": false
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 86,
+    "fields": {
+      "service": 50,
+      "unit": "A28",
+      "price": 100000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 51,
+    "fields": {
+      "category": 11,
+      "name": "Chân standee hộp",
+      "image": "",
+      "is_popular": false
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 87,
+    "fields": {
+      "service": 51,
+      "unit": "A29",
+      "price": 100000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 52,
+    "fields": {
+      "category": 11,
+      "name": "Bìa lá",
+      "image": "",
+      "is_popular": false
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 88,
+    "fields": {
+      "service": 52,
+      "unit": "A30",
+      "price": 100000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 53,
+    "fields": {
+      "category": 11,
+      "name": "Bao thư trắng",
+      "image": "",
+      "is_popular": false
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 89,
+    "fields": {
+      "service": 53,
+      "unit": "A31",
+      "price": 100000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 54,
+    "fields": {
+      "category": 11,
+      "name": "Hồ sơ xin việc",
+      "image": "",
+      "is_popular": false
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 90,
+    "fields": {
+      "service": 54,
+      "unit": "A32",
+      "price": 100000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 55,
+    "fields": {
+      "category": 11,
+      "name": "Foam trắng",
+      "image": "",
+      "is_popular": false
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 91,
+    "fields": {
+      "service": 55,
+      "unit": "A33",
+      "price": 100000
+    }
+  },
+  {
+    "model": "printing.Service",
+    "pk": 56,
+    "fields": {
+      "category": 11,
+      "name": "Giấy A4 trắng",
+      "image": "",
+      "is_popular": false
+    }
+  },
+  {
+    "model": "printing.PriceTable",
+    "pk": 92,
+    "fields": {
+      "service": 56,
+      "unit": "A34",
+      "price": 100000
+    }
+  }
+]

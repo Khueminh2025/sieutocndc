@@ -1,0 +1,42 @@
+{% load static %}
+{% load humanize %}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Tra cứu đơn hàng</title>
+    <link href="{% static 'css/output.css' %}" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+<div class="max-w-lg mx-auto p-4 text-center">
+    <h1 class="text-2xl font-bold mb-4">Tra cứu đơn hàng</h1>
+
+    {% if not order %}
+        {% if error %}
+            <p class="text-red-600">{{ error }}</p>
+        {% endif %}
+
+        <form method="post" class="space-y-4 mt-4">
+            {% csrf_token %}
+            <input type="text" name="order_code" placeholder="Nhập mã đơn hàng" class="w-full border p-2 rounded" required>
+            <input type="text" name="phone" placeholder="Nhập số điện thoại" class="w-full border p-2 rounded" required>
+            <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 w-full">
+                Tra cứu
+            </button>
+        </form>
+    {% else %}
+        <div class="text-left mt-4 bg-white rounded shadow p-4">
+            <p><strong>Mã đơn:</strong> {{ order.order_code }}</p>
+            <p><strong>Khách hàng:</strong> {{ order.customer_name }}</p>
+            <p><strong>Số điện thoại:</strong> {{ order.phone }}</p>
+            <p><strong>Sản phẩm:</strong> {{ order.service.name }} - {{ order.unit }}</p>
+            <p><strong>Số lượng:</strong> {{ order.quantity }}</p>
+            <p><strong>Tổng tiền:</strong> {{ order.total_price|intcomma }} VND</p>
+            <p><strong>Trạng thái:</strong> {{ order.get_status_display }}</p>
+        </div>
+    {% endif %}
+</div>
+
+</body>
+</html>

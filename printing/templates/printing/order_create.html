@@ -1,0 +1,47 @@
+{% load static %}
+{% load humanize %}
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đặt hàng - {{ service.name }}</title>
+    <link href="{% static 'css/output.css' %}" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+<div class="max-w-2xl mx-auto p-4">
+    <h1 class="text-2xl font-bold mb-4">Đặt hàng: {{ service.name }}</h1>
+
+    <form method="post" class="space-y-4">
+        {% csrf_token %}
+
+        <label class="block">Chọn đơn vị:</label>
+        <select name="unit" class="w-full border p-2 rounded">
+            {% for price in prices %}
+                <option value="{{ price.unit }}">{{ price.unit }} - {{ price.price|intcomma }} VND</option>
+            {% endfor %}
+        </select>
+
+        <label class="block">Số lượng:</label>
+        {{ form.quantity }}
+
+        <label class="block">Tên khách hàng:</label>
+        {{ form.customer_name }}
+
+        <label class="block">Số điện thoại:</label>
+        {{ form.phone }}
+
+        <label class="block">Địa chỉ:</label>
+        {{ form.address }}
+
+        <label class="block">Ghi chú:</label>
+        {{ form.note }}
+
+        <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
+            Xác nhận & Thanh toán
+        </button>
+    </form>
+</div>
+
+</body>
+</html>
