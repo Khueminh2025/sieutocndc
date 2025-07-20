@@ -3,9 +3,9 @@ services:
     name: sieutoc-printing
     env: python
     plan: free
-    buildCommand: "./build.sh"
-    startCommand: "gunicorn sieutoc_printing.wsgi:application --bind 0.0.0.0:$PORT"
-    preDeployCommand: "python manage.py migrate"
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn sieutoc_printing.wsgi"
+    postDeployCommand: "python manage.py migrate && python manage.py collectstatic --noinput"
     envVars:
       - key: DJANGO_SETTINGS_MODULE
         value: sieutoc_printing.settings
