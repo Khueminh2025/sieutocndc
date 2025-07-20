@@ -4,7 +4,7 @@ services:
     env: python
     plan: free
     buildCommand: "pip install -r requirements.txt"
-    startCommand: "gunicorn sieutoc_printing.wsgi"
+    startCommand: "python run_migrate.py && gunicorn sieutoc_printing.wsgi:application"
     preDeployCommand: "python manage.py collectstatic --noinput && python run_migrate.py"
     envVars:
       - key: DJANGO_SETTINGS_MODULE

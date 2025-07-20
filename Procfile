@@ -1,0 +1,1 @@
+web: gunicorn sieutoc_printing.wsgi
