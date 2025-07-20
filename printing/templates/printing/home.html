@@ -14,6 +14,8 @@
             {% for category in categories %}
                 <div class="bg-white rounded-lg shadow p-4 hover:bg-gray-100">
                     <a href="{% url 'category_detail' category.slug %}" class="text-lg font-semibold hover:text-blue-600">{{ category.name }}</a>
+                    <img src="{{ category.image.url }}">
+                    <p>{{ category.image.url }}</p>
 
                 </div>
             {% endfor %}
