@@ -15,6 +15,7 @@ def generate_unique_slug(instance, field_value, slug_field_name='slug'):
 class ServiceCategory(models.Model):
     name = models.CharField(max_length=100)
     slug = models.SlugField(unique=True, blank=True, null=True)
+    image = models.ImageField(blank=True, null=True)
 
     def save(self, *args, **kwargs):
         if not self.slug:  # chỉ tạo nếu slug chưa có
@@ -33,7 +34,7 @@ class Service(models.Model):
     category = models.ForeignKey(ServiceCategory, on_delete=models.CASCADE, related_name='services')
     name = models.CharField(max_length=100)
     slug = models.SlugField(unique=True, blank=True, null=True)
-    image = models.ImageField(upload_to='services/', blank=True, null=True)
+    image = models.ImageField(blank=True, null=True)
     is_popular = models.BooleanField(default=False)
 
     def save(self, *args, **kwargs):
