@@ -14,8 +14,7 @@ from pathlib import Path
 import environ
 import os
 import cloudinary
-import cloudinary.uploader
-import cloudinary.api
+import cloudinary_storage
 
 from urllib.parse import urlparse
 
@@ -151,17 +150,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
-CLOUDINARY_STORAGE = {
-    'CLOUD_NAME': os.environ.get('CLOUDINARY_URL').split('@')[-1],
-}
+cloudinary.config(
+    cloud_name=os.environ.get("CLOUDINARY_URL").split("@")[-1],
+    api_key=os.environ.get("CLOUDINARY_URL").split("//")[1].split(":")[0],
+    api_secret=os.environ.get("CLOUDINARY_URL").split(":")[2].split("@")[0]
+)
 
-cloudinary_url = os.environ.get('CLOUDINARY_URL')
-if cloudinary_url:
-    parsed = urlparse(cloudinary_url)
-    CLOUDINARY_STORAGE = {
-        'CLOUD_NAME': parsed.hostname,
-        'API_KEY': parsed.username,
-        'API_SECRET': parsed.password,
-    }
-    DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
