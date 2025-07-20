@@ -15,8 +15,8 @@ call_command('migrate')
 
 User = get_user_model()
 
-if not User.objects.filter(username="admin").exists():
-    User.objects.create_superuser("sieutoc", "sieutocndc@example.com", "St134b@!")
-    print("✅ Superuser 'sieutoc' created with password ''")
-else:
-    print("✅ Superuser already exists")
+# if not User.objects.filter(username="admin").exists():
+#     User.objects.create_superuser("sieutoc", "sieutocndc@example.com", "St134b@!")
+#     print("✅ Superuser 'sieutoc' created with password ''")
+# else:
+#     print("✅ Superuser already exists")

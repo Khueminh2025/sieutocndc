@@ -5,7 +5,7 @@ services:
     plan: free
     buildCommand: "pip install -r requirements.txt"
     startCommand: "python run_migrate.py && gunicorn sieutoc_printing.wsgi:application"
-    preDeployCommand: "python manage.py collectstatic --noinput && python run_migrate.py"
+    preDeployCommand: "python manage.py migrate && python manage.py loaddata fixtures_sieutoc_printing_clean.json"
     envVars:
       - key: DJANGO_SETTINGS_MODULE
         value: sieutoc_printing.settings
