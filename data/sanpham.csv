@@ -1,0 +1,46 @@
+﻿tensp,mo_ta,dichvu,gia,donvitinh
+Đóng kim keo,Đóng kim vào gáy sách và dán băng keo,1,5000,cuốn
+Đóng kim kiếng,"Đóng kim vào gáy sách, bỏ 2 miếng kiếng trước và sau, dán băng keo",1,10000,cuốn
+Đóng lò xo xoắn,"Đóng lò xo, Có miếng kiếng trước và sau, thoải mái lật sách",1,0,lần
+Đóng lò xo nhựa,"Đóng lò xo, Có miếng kiếng trước và sau, thoải mái lật sách",1,0,lần
+Đóng lò xo kẽm,"Đóng lò xo, Có miếng kiếng trước và sau, thoải mái lật sách",1,0,lần
+Ép keo nhiệt,Gay sách ép keo nhiệt,2,80000,cuốn
+Đóng bìa cứng,Gay đóng bìa cứng,2,18000,cuốn
+Scan,Scan tài liệu,2,0,lần
+Ép kim,Ép nhũ vàng hoặc bạc,2,100000,lần
+Cắt thành phẩm,Cắt nhiều kích thước,2,10000,lần
+Cán màn,Cán bóng hoặc mờ,3,0,lần
+Ép plasitc,Ép nhiều thể loại nhựa,3,0,lần
+Ép bọc,Ép nhựa dẻo bọc tài liệu,3,0,lần
+In trắng đen,in trắng đen trên nhiều chất liệu,4,0,lần
+In màu,In màu trên nhiều chất liệu và nhiều kỹ thuật in,4,0,lần
+In bản vẽ,In bản vẽ khổ lớn,4,0,lần
+Thiết kế theo mẫu,Thiết kế theo mẫu,5,0,lần
+Thiết kế theo yêu cầu,Thiết kế theo yêu cầu,5,0,lần
+Chỉnh sửa luận văn,Chỉnh sửa luận văn,5,0,lần
+Tạo file số lượng lớn,Tạo file số lượng lớn,5,0,lần
+Danh thiếp,Danh thiếp,6,150000,hộp
+Sách ép keo nhiệt,Sách ép keo nhiệt,6,0,lần
+Sách đóng bìa cứng,Sách đóng bìa cứng,6,0,lần
+Bao thư,Bao thư,6,0,lần
+Giấy ghi chú,Giấy ghi chú,6,0,lần
+Giấy tiêu đề,Giấy tiêu đề,6,0,lần
+Bìa đựng hồ sơ,Bìa đựng hồ sơ,7,0,lần
+Voucher,Voucher,7,0,lần
+Poster,Poster,7,0,lần
+Standee,Standee,7,0,lần
+Tờ rơi,Tờ rơi,8,0,lần
+Tờ gấp,Tờ gấp,8,0,lần
+Vé,Vé,9,0,lần
+Catalogue,Catalogue,9,0,lần
+Hasgtag cầm tay,Hasgtag cầm tay,9,0,lần
+Tranh Canvas,Tranh Canvas,10,0,lần
+PP bồi Fomex,PP bồi Fomex,10,0,lần
+Băn rôn,Băn rôn,10,0,lần
+Chân standee cuộn,Chân standee cuộn,11,0,lần
+Chân standee hộp,Chân standee hộp,11,0,lần
+Bìa lá,Bìa lá,11,0,lần
+Bao thư trắng,Bao thư trắng,12,0,lần
+Hồ sơ xin việc,Hồ sơ xin việc,12,0,lần
+Foam trắng,Foam trắng,12,0,lần
+Giấy A4 trắng,Giấy A4 trắng,12,0,lần

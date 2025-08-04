@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block title %}{{ service.tendv }}{% endblock %}
+{% block content %}
+<section class="container mx-auto py-10">
+  <h1 class="text-2xl font-bold mb-6 text-center">{{ service.tendv }}</h1>
+  {% if service.banner %}
+    <img src="{{ service.banner.url }}" class="w-full h-80 object-cover rounded mb-8" />
+  {% endif %}
+
+  <h2 class="text-xl font-bold mb-4">Sản phẩm thuộc dịch vụ này</h2>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+    {% for p in products %}
+      <a href="{% url 'product_detail' service.slug p.slug %}" class="bg-white rounded-xl shadow-md p-4 hover:shadow-lg">
+        {% if p.hinh %}
+          <img src="{{ p.hinh.url }}" class="w-full h-32 object-cover rounded mb-3" />
+        {% endif %}
+        <h3 class="font-semibold">{{ p.tensp }}</h3>
+      </a>
+    {% endfor %}
+  </div>
+</section>
+{% endblock %}

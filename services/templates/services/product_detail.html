@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}{{ product.tensp }}{% endblock %}
+{% block content %}
+<section class="container mx-auto py-10">
+  <div class="max-w-4xl mx-auto bg-white rounded-xl shadow p-6">
+    {% if product.hinh %}
+      <img src="{{ product.hinh.url }}" class="w-full h-64 object-cover rounded mb-6" />
+    {% endif %}
+    <h1 class="text-2xl font-bold mb-4">{{ product.tensp }}</h1>    
+    <div class="text-gray-700 leading-relaxed">
+      {{ product.mota|linebreaks }}
+    {% if product.gia == 0 %}
+      <p>
+        <a href="/lien-he" class="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+          Liên hệ
+        </a>
+      </p>
+    {% else %}
+      <p class="text-blue-600 font-bold text-xl mb-4">
+        {{ product.gia|floatformat:0 }} đ / {{ product.donvi }}
+      </p>
+    {% endif %}
+    </div>
+  </div>
+</section>
+{% endblock %}

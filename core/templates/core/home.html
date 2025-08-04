@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block title %}Trang Chủ - Siêu Tốc NDC{% endblock %}
+{% block content %}
+
+<!-- Banner đầu -->
+<section class="relative">
+  <img src="/static/images/bannerhead.jpg" class="w-full h-80 object-cover" />
+</section>
+
+<!-- Danh mục dịch vụ -->
+<section class="container mx-auto py-10">
+  <h2 class="text-2xl font-bold mb-6 text-center">Danh Mục Dịch Vụ</h2>
+{% include "services/_service_grid.html" with services=services %}
+</section>
+
+<!-- Banner giữa -->
+<section>
+  <img src="/static/images/bannermid.jpg" class="w-full h-52 object-cover" />
+</section>
+
+<!-- Sản phẩm phổ biến -->
+<section class="container mx-auto py-10">
+  <h2 class="text-2xl font-bold mb-6 text-center">Sản Phẩm Phổ Biến</h2>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+    {% for p in products %}
+      <a href="{% url 'product_detail'  p.service.slug p.slug %}" class="bg-white rounded-xl shadow-md p-4 hover:shadow-lg">
+        {% if p.hinh %}
+          <img src="{{ p.hinh.url }}" class="w-full h-32 object-cover rounded-md mb-3" />
+        {% endif %}
+        <h3 class="font-semibold">{{ p.tensp }}</h3>
+      </a>
+    {% endfor %}
+  </div>
+</section>
+
+<!-- Banner cuối -->
+<section>
+  <img src="/static/images/bannerbot.jpg" class="w-full h-100 object-cover" />
+</section>
+
+{% endblock %}

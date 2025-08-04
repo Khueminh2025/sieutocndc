@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% block title %}Siêu Tốc NDC{% endblock %}</title>
+  <link rel="stylesheet" href="{% static 'css/output.css' %}" />
+</head>
+<body class="flex flex-col min-h-screen">
+  {% include "includes/navbar.html" %}
+  <div class="w-full bg-black h-10 flex items-center justify-center text-white text-sm"
+     x-data="{
+       messages: [
+         '⭐ Semi-Annual Sale: Up to 40% off almost everything | Ends July 25',
+         '🚚 Free shipping on orders over $100',
+         '🔥 Today\'s Deal: 40% off sticker singles'
+       ],
+       currentIndex: 0,
+       get currentMessage() {
+         return this.messages[this.currentIndex];
+       },
+       init() {
+         setInterval(() => {
+           this.currentIndex = (this.currentIndex + 1) % this.messages.length;
+         }, 10000); // mỗi 10s
+       }
+     }"
+     x-init="init()"
+>
+  <span x-text="currentMessage" class="transition-opacity duration-500 ease-in-out"></span>
+</div>
+  
+  <main class="flex-1 w-full max-w-screen-lg mx-auto px-4">
+    {% block content %}{% endblock %}
+  </main>
+  {% include "includes/footer.html" %}
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</body>
+</html>

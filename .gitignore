@@ -1,0 +1,45 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.swp
+*.bak
+*.log
+
+# Môi trường ảo
+env/
+venv/
+ENV/
+VENV/
+*.env
+
+# Biến môi trường
+.env
+.env.*
+
+# Django migrations
+**/migrations/
+!**/migrations/__init__.py
+
+# Database (nếu dùng SQLite)
+*.sqlite3
+
+# VSCode / IDE
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Static files (nếu dùng collectstatic)
+staticfiles/
+media/
+
+# MacOS system files
+.DS_Store
+
+# Gunicorn socket/log (nếu có)
+gunicorn.sock
+*.pid
+
+# Dump data (nếu không muốn push)
