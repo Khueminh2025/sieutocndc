@@ -1,26 +1,35 @@
 {% extends "base.html" %}
 {% block title %}{{ product.tensp }}{% endblock %}
 {% block content %}
-<section class="container mx-auto py-10">
-  <div class="max-w-4xl mx-auto bg-white rounded-xl shadow p-6">
-    {% if product.hinh %}
-      <img src="{{ product.hinh.url }}" class="w-full h-64 object-cover rounded mb-6" />
-    {% endif %}
-    <h1 class="text-2xl font-bold mb-4">{{ product.tensp }}</h1>    
-    <div class="text-gray-700 leading-relaxed">
-      {{ product.mota|linebreaks }}
-    {% if product.gia == 0 %}
-      <p>
-        <a href="/lien-he" class="inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
-          Liên hệ
-        </a>
-      </p>
-    {% else %}
-      <p class="text-blue-600 font-bold text-xl mb-4">
-        {{ product.gia|floatformat:0 }} đ / {{ product.donvi }}
-      </p>
-    {% endif %}
+
+<div class="max-w-7xl mx-auto bg-white rounded-2xl shadow-lg p-12 flex flex-col md:flex-row gap-8 items-start">
+    <!-- Left: Square Image -->
+    <div class="w-full md:w-[480px] flex-shrink-0 flex justify-start items-center">
+      {% if product.hinh %}
+        <img src="{{ product.hinh.url }}" class="w-[500px] h-[500px] object-cover rounded-2xl border-2 border-gray-200 shadow" />
+      {% else %}
+        <div class="w-[500px] h-[500px] bg-gray-100 flex items-center justify-center rounded-2xl border-2 text-gray-400 text-3xl">No Image</div>
+      {% endif %}
+    </div>
+    <!-- Right: Info -->
+    <div class="flex-[2] flex flex-col justify-between h-full w-full pl-4">
+      <h1 class="text-4xl font-bold mb-4">{{ product.tensp }}</h1>
+      <div class="mb-8 text-gray-700 leading-relaxed text-xl">{{ product.mota|linebreaks }}</div>
+      {% if product.gia == 0 %}
+        <div class="mb-8">
+          <a href="/lien-he" class="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg text-2xl hover:bg-blue-700 transition">
+            Liên hệ
+          </a>
+        </div>
+      {% else %}
+        <div class="mb-8">
+          <span class="text-blue-600 font-bold text-3xl">{{ product.gia|floatformat:0 }} đ / {{ product.donvi }}</span>
+        </div>
+      {% endif %}
+      <!-- Upload File Modal Trigger -->
+      <!-- <div class="mt-8">
+        <button @click="openUploadModal = true" class="bg-blue-600 text-white px-10 py-4 rounded-lg shadow hover:bg-blue-700 transition text-xl">Upload File Thiết Kế</button>
+      </div> -->
     </div>
   </div>
-</section>
 {% endblock %}

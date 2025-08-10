@@ -1,5 +1,128 @@
-<footer class="bg-gray-900 text-white mt-10">
-  <div class="container mx-auto py-6 px-4 text-center">
-    <p>&copy; 2025 Siêu Tốc NDC. All rights reserved.</p>
+{% load static %}
+<footer class="bg-white border-t border-gray-200 text-sm text-gray-700 pt-6">
+  <div class="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-4 gap-6 pt-2">
+    
+    <!-- Cột 1: Logo + Thời gian mở cửa -->
+    <div class="flex flex-col items-center">
+      
+        <img 
+          src="{% static 'images/logo-footer.jpg' %}" 
+          alt="Logo Siêu Tốc" 
+          class=" !w-30 !h-30 rounded-full object-cover object-center">
+      
+      <p class="font-semibold text-center pt-4">CÔNG TY TNHH SIÊU TỐC</p>
+      <div class="mt-2 text-center pt-2">
+        <p class="font-semibold pb-2">GIỜ MỞ CỬA</p>
+        <p class="pb-2">Thứ 2 - 6: 7h00 - 19h00</p>
+        <p>Thứ 7 & CN: 7h30 - 19h00</p>
+      </div>
+    </div>
+
+    <!-- Cột 2: Tư vấn đặt hàng (4 card, 2x2) -->
+    <div>
+      <h3 class="font-semibold mb-4 text-center">TƯ VẤN ĐẶT HÀNG</h3>
+      <div class="grid grid-cols-2 gap-4">
+        <!-- Card 1 -->
+        <div class="bg-gray-100 rounded p-2 w-40 text-center flex flex-col items-center">
+          <div class="w-12 h-12 rounded-full bg-green-200 flex items-center justify-center mb-2">
+            <img 
+          src="{% static 'images/iconstaf-01.jpg' %}"
+          class=" h-fit rounded-full object-cover object-center">
+          </div>
+          <div class="font-semibold">Phương Chi</div>
+          <a href="tel:0936294603" class="text-green-600 font-medium hover:underline">0936 294 603</a>
+        </div>
+        <!-- Card 2 -->
+        <div class="bg-gray-100 rounded p-2 w-40 text-center flex flex-col items-center">
+          <div class="w-12 h-12 rounded-full bg-blue-200 flex items-center justify-center mb-2">
+            <img 
+          src="{% static 'images/iconstaf-01.jpg' %}"
+          class=" h-fit rounded-full object-cover object-center">
+          </div>
+          <div class="font-semibold">Thành Lộc</div>
+          <a href="tel:0936294604" class="text-green-600 font-medium hover:underline">0936 294 604</a>
+        </div>
+        <!-- Card 3 -->
+        <div class="bg-gray-100 rounded p-2 w-40 text-center flex flex-col items-center">
+          <div class="w-12 h-12 rounded-full bg-pink-200 flex items-center justify-center mb-2">
+                        <img 
+          src="{% static 'images/iconstaf-01.jpg' %}"
+          class=" h-fit rounded-full object-cover object-center">
+          </div>
+          <div class="font-semibold">An Bình</div>
+          <a href="tel:0936294605" class="text-green-600 font-medium hover:underline">0936 294 605</a>
+        </div>
+        <!-- Card 4 -->
+        <div class="bg-gray-100 rounded p-2 w-40 text-center flex flex-col items-center">
+          <div class="w-12 h-12 rounded-full bg-yellow-200 flex items-center justify-center mb-2">
+                        <img 
+          src="{% static 'images/iconstaf-01.jpg' %}"
+          class=" h-fit rounded-full object-cover object-center">
+          </div>
+          <div class="font-semibold">Trọng Tín</div>
+          <a href="tel:0936294606" class="text-green-600 font-medium hover:underline">0936 294 606</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cột 3: Hướng dẫn & Chính sách -->
+    <div class="flex flex-col items-center">
+      <h3 class="font-semibold mb-2">HƯỚNG DẪN VÀ THÔNG TIN</h3>
+      <ul class="list-disc list-inside space-y-1">
+        <li>Hướng dẫn đặt hàng online</li>
+        <li>Giao hàng và Vận Chuyển</li>
+        <li>Hình thức thanh toán</li>
+      </ul>
+      <div class="mt-8 w-full flex flex-col items-center">
+        <p class="font-semibold text-center mb-2">HỢP TÁC & GÓP Ý DỊCH VỤ</p>
+        <div class="flex flex-col items-center gap-2">
+          <div class="bg-gray-100 rounded p-2 w-44 text-center">
+            <div class="font-semibold">Mr. Trọng Trí</div>
+            <a href="tel:0912345678" class="text-green-600 font-medium hover:underline">0912 345 678</a>
+          </div>
+          <div class="bg-gray-100 rounded p-2 w-44 text-center">
+            <div class="font-semibold">Ms. Hà</div>
+            <a href="tel:0987654321" class="text-green-600 font-medium hover:underline">0987 654 321</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cột 4: Liên hệ + Địa chỉ + Google Maps -->
+    <div class="space-y-3 flex flex-col items-start">
+      <!-- Phone -->
+      <div class="flex items-center space-x-2">
+        <img src="{% static 'icons/phone-icon.png' %}" alt="Phone" class="w-5 h-5">
+        <a href="tel:0936294603" class="text-green-600 hover:underline">0936 294 603</a>
+      </div>
+      <!-- Email -->
+      <div class="flex items-center space-x-2">
+        <img src="{% static 'icons/email-icon.png' %}" alt="Email" class="w-5 h-5">
+        <a href="mailto:sieutocndc@gmail.com" class="hover:underline">sieutocndc@gmail.com</a>
+      </div>
+      <!-- Website -->
+      <div class="flex items-center space-x-2">
+        <img src="{% static 'icons/website-icon.png' %}" alt="Website" class="w-5 h-5">
+        <a href="https://sieutocndc.com" target="_blank" class="hover:underline text-blue-600">https://sieutocndc.com/</a>
+      </div>
+      <!-- Address -->
+      <div class="flex items-start space-x-2 mt-2">
+        <img src="{% static 'icons/address-icon.png' %}" alt="Address" class="w-5 h-5 mt-1">
+        <div class="text-green-600 font-semibold">
+          134b Nguyễn Đình Chiểu,<br>Phường Xuân Hòa, TP Hồ Chí Minh
+        </div>
+      </div>
+      <!-- Google Maps Image -->
+      <div class="mt-2 flex  h-full justify-center items-center">
+        <a href="https://www.google.com/maps/place/In+Si%C3%AAu+T%E1%BB%91c+-+Fast+Printing/@10.7828426,106.6941673,18z/data=!4m6!3m5!1s0x31752f36aef22111:0x295399597e903ece!8m2!3d10.7833828!4d106.6945305!16s%2Fg%2F11g8g1ypzb?entry=ttu&g_ep=EgoyMDI1MDgwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" class="block mx-auto">
+          <img src="{% static 'images/map-preview.jpg' %}" alt="Google Maps" class="rounded shadow w-48 h-32 object-cover border border-gray-200 hover:shadow-lg transition duration-200 mx-auto">
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer note -->
+  <div class="text-center text-1xl font-semibold text-gray-500 mt-4 px-4 py-2 border-t border-gray-200">
+    CHÚNG TÔI QUAN TÂM KHÁCH HÀNG - XỬ LÝ TỐT THÔNG TIN - CHÚ Ý CHẤT LƯỢNG SẢN PHẨM
   </div>
 </footer>

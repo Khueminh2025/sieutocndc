@@ -24,4 +24,4 @@ urlpatterns = [
     path('services/', include('services.urls')),
     # path('order/', include('order.urls')),
     # path('upload/', include('upload.urls')),
-]
+] 

@@ -6,7 +6,8 @@ from services.models import Service, Product
 # Register your models here.
 @admin.register(Service)
 class ServiceAdmin(admin.ModelAdmin):
-    list_display = ['tendv','slug','phobien' ]   
+    list_display = ['tendv','slug','phobien' ] 
+    list_editable = ['phobien'] 
 
     def save_model(self, request, obj, form, change):
         # Giữ nguyên logic slug

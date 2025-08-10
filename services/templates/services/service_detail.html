@@ -12,9 +12,9 @@
     {% for p in products %}
       <a href="{% url 'product_detail' service.slug p.slug %}" class="bg-white rounded-xl shadow-md p-4 hover:shadow-lg">
         {% if p.hinh %}
-          <img src="{{ p.hinh.url }}" class="w-full h-32 object-cover rounded mb-3" />
+          <img src="{{ p.hinh.url }}" class="w-full h-fit object-cover rounded mb-3" />
         {% endif %}
-        <h3 class="font-semibold">{{ p.tensp }}</h3>
+        <h3 class="font-semibold text-center\">{{ p.tensp }}</h3>
       </a>
     {% endfor %}
   </div>

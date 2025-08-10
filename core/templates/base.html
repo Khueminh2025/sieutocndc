@@ -6,30 +6,87 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{% block title %}Siêu Tốc NDC{% endblock %}</title>
   <link rel="stylesheet" href="{% static 'css/output.css' %}" />
+
 </head>
 <body class="flex flex-col min-h-screen">
+
   {% include "includes/navbar.html" %}
-  <div class="w-full bg-black h-10 flex items-center justify-center text-white text-sm"
-     x-data="{
-       messages: [
-         '⭐ Semi-Annual Sale: Up to 40% off almost everything | Ends July 25',
-         '🚚 Free shipping on orders over $100',
-         '🔥 Today\'s Deal: 40% off sticker singles'
-       ],
-       currentIndex: 0,
-       get currentMessage() {
-         return this.messages[this.currentIndex];
-       },
-       init() {
-         setInterval(() => {
-           this.currentIndex = (this.currentIndex + 1) % this.messages.length;
-         }, 10000); // mỗi 10s
-       }
-     }"
-     x-init="init()"
->
-  <span x-text="currentMessage" class="transition-opacity duration-500 ease-in-out"></span>
-</div>
+
+  <!-- Thanh dịch vụ phổ biến -->
+  {% if popular_services %}
+  <div class="w-full bg-white border-b border-gray-200 py-2">
+    <div class="max-w-screen-lg mx-auto flex flex-wrap justify-center gap-6">
+      {% for s in popular_services %}
+        <a href="{% url 'service_detail' s.slug %}" class="text-gray-500 font-medium whitespace-nowrap hover:text-black transition">
+          {{ s.tendv }}          
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  <div class="w-full bg-black flex items-center text-white text-1xl h-12 overflow-hidden relative"
+    x-data="{
+      messages: [
+        '⭐ Giao hàng nhanh chóng trong phạm vị nội thành Hồ Chí Minh',
+        '🚚 Miễn phí giao hàng cho đơn hàng từ 2 triệu đồng',
+        '🔥 Ưu đãi hôm nay: Giảm 10% cho đơn hàng sticker'
+      ],
+      marquees: [
+        { idx: 0, left: '100%', running: false },
+        { idx: 1, left: '100%', running: false }
+      ],
+      duration: 0,
+      containerWidth: 0,
+      startMarquee(i, delay = 0) {
+        let marquee = this.marquees[i];
+        let msg = this.messages[marquee.idx];
+        this.$refs['marquee'+i].innerText = msg;
+        this.$refs['marquee'+i].style.transition = 'none';
+        this.$refs['marquee'+i].style.left = '100%';
+        let width = this.$refs['marquee'+i].offsetWidth;
+        let distance = width + this.containerWidth;
+        let duration = distance * 15;
+        setTimeout(() => {
+          this.$refs['marquee'+i].style.transition = `left ${duration}ms linear`;
+          this.$refs['marquee'+i].style.left = `-${width}px`;
+          marquee.running = true;
+          // Khi chạy xong thì reset lại marquee này với message tiếp theo
+          setTimeout(() => {
+            marquee.idx = (marquee.idx + 2) % this.messages.length;
+            marquee.running = false;
+            this.startMarquee(i);
+          }, duration);
+        }, delay);
+      },
+      init() {
+        this.$nextTick(() => {
+          this.containerWidth = this.$el.offsetWidth;
+          // Marquee 1 chạy ngay
+          this.startMarquee(0, 0);
+          // Marquee 2 chạy sau khi marquee 1 đi được nửa container
+          let width0 = this.$refs['marquee0'].offsetWidth;
+          let distance0 = width0 + this.containerWidth;
+          let duration0 = distance0 * 15;
+          setTimeout(() => {
+            this.startMarquee(1, 0);
+          }, duration0 / 2);
+        });
+      }
+    }"
+    x-init="init()"
+  >
+    <span
+      x-ref="marquee0"
+      class="absolute whitespace-nowrap left-full"
+      style="will-change: left;"
+    ></span>
+    <span
+      x-ref="marquee1"
+      class="absolute whitespace-nowrap left-full"
+      style="will-change: left;"
+    ></span>
+  </div>
   
   <main class="flex-1 w-full max-w-screen-lg mx-auto px-4">
     {% block content %}{% endblock %}

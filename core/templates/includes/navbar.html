@@ -1,10 +1,10 @@
 {% load static %}
-    <header class="bg-white shadow-sm py-2 px-4">
+    <header class="bg-white shadow-sm py-2 px-4 pt-5 pb-4">
       <div class="max-w-screen-xl mx-auto flex items-center justify-between gap-4">
 
         <!-- Logo trái -->
         <a href="/" class="flex items-center shrink-0">
-          <img src="{% static 'images/logo.jpg' %}" alt="Logo" class="h-10 w-auto">
+          <img src="{% static 'images/logo.jpg' %}" alt="Logo" class="h-20 w-auto">
         </a>
 
         <!-- Thanh tìm kiếm ở giữa -->
@@ -24,6 +24,7 @@
 
         <!-- Menu bên phải -->
         <nav class="flex items-center space-x-6 text-sm text-gray-700 font-medium">
+          <a href="/services/" class="hover:text-green-600">Dịch vụ</a>
           <a href="/lien-he" class="hover:text-green-600">Tra cứu đơn hàng</a>
           <a href="/lien-he/" class="hover:text-green-600">Báo giá nhanh</a>
           <a href="/lien-he/" class="hover:text-green-600">Liên hệ</a>
